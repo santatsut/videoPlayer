@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Player</title>
+</head>
+<body>
+    <nav>
+        <h1>VideoPlayer</h1>
+        <h2>Home</h2>
+        <h2 onclick="location.href='./about.html'">About</h2>
+    </nav>
+    <div id="videoPlayer">
+        <div id="firstBox">
+            <video width="1280" height="720" src="testVideo.mp4" title="Test Video" id="video"></video>
+        </div>
+        <div id="controls">
+            <button class="button-30" role="button" onclick="skipBackward()" id="skipB">«</button>
+            <button class="button-30" role="button" onclick="pauseVid()" id="playPauseButton">></button>
+            <button class="button-30" role="button" onclick="skipForward()" id="skipF">»</button>
+            <input type="range" min="0" max="0" value="0" id="videoSlider" oninput="durationChange()">
+            <div id="volSection">
+                <input type="range" min="0" max="100" value="0" class="slider" id="myRange" orient="vertical" oninput="volumeChange()">
+                <p id="vol" onclick="showVol()">🔊</p>
+            </div>
+            <button class="button-30" role="button" onclick="fullscreen()">◳</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

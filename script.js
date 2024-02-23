@@ -27,7 +27,7 @@ function skipBackward() {
     vid.currentTime -= value;
     videoSlider.value = vid.currentTime;
 }
-slider.style.display == "none"
+slider.style.display = "none"
 function showVol() {
     if(slider.style.display == "none") {
         slider.style.display = "flex";
